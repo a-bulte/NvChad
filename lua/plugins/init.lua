@@ -17,7 +17,20 @@ return {
     "stevearc/dressing.nvim",
     event = "VeryLazy",
     opts = {},
-  }
+  },
+
+  {
+    "rcarriga/nvim-notify",
+    config = function()
+      local notify = require("notify")
+      notify.setup({
+        top_down = false,
+        max_width = 50,
+      })
+      vim.notify = notify
+    end,
+    event = "VeryLazy",
+  },
 
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
