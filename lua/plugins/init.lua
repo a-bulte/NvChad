@@ -32,6 +32,14 @@ return {
     event = "VeryLazy",
   },
 
+  {
+    "folke/which-key.nvim",
+    opts = {
+      preset = "helix",
+    },
+    event = "VeryLazy",
+  },
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
