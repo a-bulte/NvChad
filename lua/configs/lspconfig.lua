@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "clojure_lsp" }
+local servers = { "html", "cssls", "clojure_lsp", "emmet_language_server" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -15,6 +15,19 @@ for _, lsp in ipairs(servers) do
     capabilities = nvlsp.capabilities,
   }
 end
+
+lspconfig.tailwindcss.setup {
+  settings = {
+    tailwindCSS = {
+      experimental = {
+        classRegex = { ':class\\s+"([^"]*)"', ":[\\w-.#>]+\\.([\\w-]*)"}
+      },
+      includeLanguages = {
+        clojure = "html",
+      }
+    }
+  }
+}
 
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
