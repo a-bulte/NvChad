@@ -24,4 +24,7 @@ map("n", "<C-Right>", "<C-w><Right>", { desc = "Focus right window" })
 map("n", "<C-Up>", "<C-w><Up>", { desc = "Focus up window" })
 map("n", "<C-Down>", "<C-w><Down>", { desc = "Focus down window" })
 
+-- hop.nvim
+map("n", "<leader><leader>", "<cmd> HopWord <cr>", { desc = "Hop to word" })
+
 -- map({ "n",o "i", "v" }, "<C-s>", "<cmd> w <cr>")

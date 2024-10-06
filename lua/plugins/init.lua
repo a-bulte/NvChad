@@ -47,7 +47,17 @@ return {
       require("todo-comments").setup({})
     end,
     event = "VeryLazy",
-  }
+  },
+
+  {
+    "smoka7/hop.nvim",
+    event = "VeryLazy",
+    config = function ()
+      require("hop").setup({
+        keys = "nretsiau"
+      })
+    end
+  },
 
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
