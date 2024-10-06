@@ -18,4 +18,10 @@ map({ "n", "t" }, "<C-g>", function ()
     cmd = "lazygit" }
 end, { desc = "Open floating term with lazygit" } )
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- Window focus
+map("n", "<C-Left>", "<C-w><Left>", { desc = "Focus left window" })
+map("n", "<C-Right>", "<C-w><Right>", { desc = "Focus right window" })
+map("n", "<C-Up>", "<C-w><Up>", { desc = "Focus up window" })
+map("n", "<C-Down>", "<C-w><Down>", { desc = "Focus down window" })
+
+-- map({ "n",o "i", "v" }, "<C-s>", "<cmd> w <cr>")
