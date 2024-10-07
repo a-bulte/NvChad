@@ -20,7 +20,7 @@ lspconfig.tailwindcss.setup {
   settings = {
     tailwindCSS = {
       experimental = {
-        classRegex = { ':class\\s+"([^"]*)"', ":[\\w-.#>]+\\.([\\w-]*)"}
+        classRegex = { ':class\\s+"([^"]*)"', ":[\\w-.#>]+\\.([\\w-]*)" }
       },
       includeLanguages = {
         clojure = "html",
