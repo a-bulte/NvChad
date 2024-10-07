@@ -43,7 +43,7 @@ return {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    config = function ()
+    config = function()
       require("todo-comments").setup({})
     end,
     event = "VeryLazy",
@@ -52,11 +52,36 @@ return {
   {
     "smoka7/hop.nvim",
     event = "VeryLazy",
-    config = function ()
+    config = function()
       require("hop").setup({
         keys = "nretsiau"
       })
     end
+  },
+
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    name = "tailwind-tools",
+    build = ":UpdateRemotePlugins",
+    ft = { "clojure", "html" },
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-telescope/telescope.nvim",
+      "neovim/nvim-lspconfig",
+    },
+    opts = {
+      server = {
+        override = false,
+      },
+      document_color = {
+        enabled = false,
+      },
+      extension = {
+        patterns = {
+          clojure = { ":class \"([^\"]+)\"", ":[%w%-#>]+%.([%w%-%.]*)" }
+        }
+      }
+    }
   },
 
   -- {
